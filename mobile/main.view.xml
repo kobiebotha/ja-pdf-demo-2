@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <view title="PDF Demo">
 
+    <html src="@local/hello_world/index.html" height="600" id="myreport" show-fullscreen-button="true"/>
+
+    <button label="generate report" on-press="generatePDF" />
 </view>

@@ -1,3 +1,5 @@
+import {getData} from "@local/hello_world"
+
 // This function is called when the app navigates to this view (using a link)
 function init() {
     // initialize any data here that should be available when the view is shown
@@ -9,4 +11,9 @@ function resume(from) {
     // from.dismissed  (true/false) if true, the app dismissed to return to this view
     // from.path       contains the path of the view that the user returned from
     // if any data needs to be refreshed when the user returns to this view, you can do that here:
+}
+
+async function generatePDF() {
+    const data = await getData(DB);
+    component.html({id: 'myreport'}).post('generatePDF', data);
 }
